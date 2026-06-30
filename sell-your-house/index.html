@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your House As-Is in Raleigh | ADN Property Group</title>
+  <meta
+    name="description"
+    content="Get a fair as-is cash offer from ADN Property Group in Raleigh. No repairs, no pressure, no agent fees. Tell us about your property and we will reach out."
+  >
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --bg-soft: #15181c;
+      --bg-elevated: #181c21;
+      --panel: rgba(21, 24, 29, 0.94);
+      --panel-soft: rgba(255, 255, 255, 0.03);
+      --ink: #f4efe6;
+      --muted: #b6ad9f;
+      --gold: #d4a63a;
+      --gold-soft: #ead29b;
+      --line: rgba(212, 166, 58, 0.16);
+      --line-strong: rgba(212, 166, 58, 0.3);
+      --success: #d8f1d9;
+      --success-ink: #143b19;
+      --warning: #fff1d9;
+      --warning-ink: #5b3a0d;
+      --shadow: rgba(0, 0, 0, 0.22);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Segoe UI Variable Text", "Segoe UI", Aptos, "Trebuchet MS", sans-serif;
+      background: linear-gradient(180deg, #090b0d 0%, #111418 28%, #0d0f12 100%);
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10, 12, 15, 0.96);
+      border-bottom: 1px solid rgba(212, 166, 58, 0.1);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #171b20;
+      border: 1px solid var(--line-strong);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      padding: 6px;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-name,
+    .button,
+    h1,
+    h2,
+    .form-title,
+    .trust-label,
+    .card h3,
+    .step-number,
+    .service-area h3,
+    summary {
+      font-family: "Segoe UI Variable Display", "Segoe UI Semibold", Aptos, sans-serif;
+    }
+
+    .brand-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-tag {
+      font-size: 0.82rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .button-primary {
+      background: linear-gradient(180deg, #e1ba62 0%, #c9952f 100%);
+      color: #1a1309;
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 56px 0 34px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 24px 0 auto;
+      height: 520px;
+      background:
+        linear-gradient(120deg, rgba(212, 166, 58, 0.1), rgba(255, 255, 255, 0) 38%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0));
+      border-radius: 40px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(340px, 420px);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .hero-copy {
+      padding-top: 18px;
+      animation: rise 620ms ease-out both;
+    }
+
+    .eyebrow,
+    .section-eyebrow,
+    .form-kicker {
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      letter-spacing: 0.09em;
+    }
+
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(2.7rem, 6vw, 5.1rem);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      max-width: 11ch;
+    }
+
+    .hero-copy p {
+      max-width: 62ch;
+      margin: 0;
+      font-size: 1.06rem;
+      color: var(--muted);
+    }
+
+    .hero-copy p + p {
+      margin-top: 12px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li,
+    .proof-list li,
+    .quote,
+    .trust-item {
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .hero-points li {
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      color: var(--ink);
+      font-size: 0.94rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-note,
+    .section-head p,
+    .card p,
+    .service-area p,
+    details p,
+    .footer,
+    .microcopy,
+    .quote cite,
+    .trust-item p,
+    .cta-band p {
+      color: var(--muted);
+    }
+
+    .hero-note {
+      margin-top: 16px;
+      font-size: 0.92rem;
+    }
+
+    .form-card,
+    .card,
+    details,
+    .service-area,
+    .cta-band {
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.012)),
+        var(--bg-elevated);
+    }
+
+    .form-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 248, 236, 0.05), rgba(255, 255, 255, 0.02)),
+        var(--panel);
+      padding: 24px;
+      box-shadow: 0 24px 48px var(--shadow);
+      animation: rise 720ms ease-out both;
+    }
+
+    .form-card::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: calc(var(--radius-xl) - 10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+    }
+
+    .form-kicker {
+      margin: 0;
+    }
+
+    .form-title {
+      margin: 10px 0 8px;
+      font-size: 1.75rem;
+      line-height: 1.02;
+    }
+
+    .form-text {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      min-height: 54px;
+      padding: 14px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      background: rgba(10, 11, 13, 0.4);
+      color: var(--ink);
+      font: inherit;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 116px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #a49784;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid rgba(212, 166, 58, 0.34);
+      outline-offset: 2px;
+      border-color: var(--line-strong);
+    }
+
+    .form-button {
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .microcopy {
+      margin: 12px 0 0;
+      font-size: 0.82rem;
+    }
+
+    .form-success {
+      display: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: var(--success);
+      color: var(--success-ink);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .form-error {
+      display: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(120, 36, 24, 0.14);
+      color: #5e1f15;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .trap-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .trust-strip {
+      padding: 8px 0 44px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .trust-item {
+      padding: 18px;
+      border-radius: 18px;
+    }
+
+    .trust-label {
+      color: var(--gold-soft);
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .trust-item p {
+      margin: 6px 0 0;
+      font-size: 0.92rem;
+    }
+
+    .section {
+      padding: 36px 0;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 10px;
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 0;
+      font-size: 1rem;
+      max-width: 62ch;
+    }
+
+    .pain-grid,
+    .process-grid,
+    .proof-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .pain-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--gold), rgba(212, 166, 58, 0));
+      opacity: 0.9;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.05;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.94rem;
+    }
+
+    .process-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #e1ba62, #be8828);
+      color: #171109;
+      font-size: 1.08rem;
+      font-weight: 900;
+    }
+
+    .proof-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: start;
+    }
+
+    .proof-panel,
+    .testimonial {
+      display: grid;
+      gap: 18px;
+    }
+
+    .proof-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .proof-list li {
+      padding: 16px 18px;
+      border-radius: 16px;
+      color: var(--ink);
+    }
+
+    .proof-list strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--gold-soft);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .quote {
+      padding: 20px;
+      border-radius: 18px;
+    }
+
+    .quote p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .quote cite {
+      display: block;
+      margin-top: 12px;
+      font-style: normal;
+      font-size: 0.9rem;
+    }
+
+    .service-area {
+      padding: 22px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(212, 166, 58, 0.07), rgba(255, 255, 255, 0.02)),
+        var(--bg-elevated);
+    }
+
+    .service-area h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .service-area p {
+      margin: 0;
+    }
+
+    .placeholders {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .placeholder-pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--ink);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    details {
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 1.02rem;
+      font-weight: 800;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      margin: 12px 0 0;
+      font-size: 0.94rem;
+    }
+
+    .final-cta {
+      padding: 36px 0 72px;
+    }
+
+    .cta-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: 28px;
+      border-radius: 28px;
+      border-color: var(--line-strong);
+      background:
+        linear-gradient(140deg, rgba(212, 166, 58, 0.12), rgba(255, 255, 255, 0.025) 44%),
+        var(--bg-elevated);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.14);
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+    }
+
+    .cta-band p {
+      margin: 12px 0 0;
+      max-width: 54ch;
+    }
+
+    .footer {
+      padding: 0 0 34px;
+      font-size: 0.88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .proof-grid,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid,
+      .pain-grid,
+      .process-grid,
+      .faq-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(var(--max), calc(100% - 22px));
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .brand {
+        width: 100%;
+      }
+
+      .brand-tag {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+      }
+
+      .topbar-actions {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .topbar-actions .button,
+      .topbar-actions .chip {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      h1 {
+        max-width: none;
+      }
+
+      .hero-points,
+      .trust-grid,
+      .pain-grid,
+      .process-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-card,
+      .card,
+      .cta-band {
+        padding: 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand">
+        <img
+          class="brand-mark"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='16' fill='%23171b20' stroke='%23d4a63a' stroke-width='2'/%3E%3Cpath d='M16 44V20h7.5c4.6 0 7.5 2.9 7.5 7.3v9.4c0 4.4-2.9 7.3-7.5 7.3H16Zm5.3-4.5h2.1c1.5 0 2.5-1 2.5-2.7v-9.7c0-1.7-1-2.7-2.5-2.7h-2.1v15.1Z' fill='%23f4efe6'/%3E%3Cpath d='M34 44l7.4-24h6.8L55.6 44h-5.5l-1.2-4.4h-8.1L39.6 44H34Zm8-8.8h5.7L45 25.3 42 35.2Z' fill='%23f4efe6'/%3E%3C/svg%3E"
+          alt="ADN Property Group"
+        >
+        <div class="brand-copy">
+          <div class="brand-name">ADN Property Group</div>
+          <div class="brand-tag">Local home-buying help for Raleigh-area sellers</div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <div class="chip">Serving Raleigh, Cary, Garner, and surrounding Wake County areas</div>
+        <a class="button button-secondary" href="tel:+1-919-604-5062">Call (919) 604-5062</a>
+        <a class="button button-primary" href="#seller-form">Get My Cash Offer</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Sell As-Is In Raleigh</div>
+          <h1>Sell your house without repairs, pressure, or guesswork.</h1>
+          <p>
+            ADN Property Group helps homeowners in Raleigh sell quickly and simply.
+            If the property needs work, the timeline is tight, or you just want a direct path forward,
+            we can review the property and discuss a fair as-is offer.
+          </p>
+          <p>
+            No agent fees. No cleanup marathon. No obligation to move forward after you talk with us.
+          </p>
+          <ul class="hero-points">
+            <li>No repairs or deep cleaning required</li>
+            <li>Talk directly with a local buyer, not a call-center handoff</li>
+            <li>Flexible timing based on your situation</li>
+            <li>Simple next steps with no-pressure follow-up</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#seller-form">Start Your Offer Request</a>
+            <a class="button button-secondary" href="#how-it-works">See How It Works</a>
+          </div>
+          <div class="hero-note">
+            Common situations we help with: inherited property, unwanted repairs, tired rentals,
+            sudden relocation, problem tenants, and houses that just need a clean exit path.
+          </div>
+        </div>
+
+        <aside class="form-card" id="seller-form">
+          <p class="form-kicker">Fast First Step</p>
+          <h2 class="form-title">Request your as-is offer.</h2>
+          <p class="form-text">
+            Fill out the short form below. We will review the property details and follow up using the
+            contact method you provide.
+          </p>
+
+          <form
+            id="offer-form"
+            class="form-grid"
+            action=""
+            method="post"
+            target="lead-submit-frame"
+            novalidate
+          >
+            <label>
+              Property address
+              <input
+                type="text"
+                name="propertyAddress"
+                placeholder="123 Main St, Raleigh, NC"
+                required
+              >
+            </label>
+            <label>
+              Your name
+              <input
+                type="text"
+                name="sellerName"
+                placeholder="Your full name"
+                required
+              >
+            </label>
+            <label>
+              Best phone number
+              <input
+                type="tel"
+                name="phone"
+                placeholder="(919) 604-5062"
+                required
+              >
+            </label>
+            <input type="hidden" name="city" value="Raleigh">
+            <input type="hidden" name="state" value="NC">
+            <input type="hidden" name="zip" value="">
+            <label class="trap-field" aria-hidden="true">
+              Leave this field empty
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </label>
+            <label>
+              Anything we should know? <span style="color: var(--muted); font-weight: 600;">Optional</span>
+              <textarea
+                name="details"
+                placeholder="Timeline, repairs needed, tenant situation, inherited property, or any other context."
+              ></textarea>
+            </label>
+            <button class="button button-primary form-button" type="submit">Get My Cash Offer</button>
+          </form>
+
+          <p class="microcopy">
+            By submitting, you are asking ADN Property Group to contact you about the property above.
+            We review each request before following up directly.
+          </p>
+          <div class="form-success" id="form-success">
+            Thanks. We received your request and will review the property details before following up directly.
+          </div>
+          <div class="form-error" id="form-error">
+            We could not submit your request right now. Please call (919) 604-5062 or try again.
+          </div>
+          <iframe
+            name="lead-submit-frame"
+            title="Lead submission"
+            style="display: none; width: 0; height: 0; border: 0;"
+          ></iframe>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="shell trust-grid">
+        <div class="trust-item">
+          <div class="trust-label">As-Is</div>
+          <p>We are open to houses that need repairs, cleanup, or a more direct path to sale.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-label">Local</div>
+          <p>Focused on Raleigh-area sellers who want a direct, local conversation instead of a generic national funnel.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-label">Simple</div>
+          <p>One short form, one clear next step, and no clutter competing with the main CTA.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-label">No Pressure</div>
+          <p>Lead with help and clarity, not hard-close language that makes the page feel spammy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-eyebrow">Why Sellers Reach Out</div>
+          <h2>You do not need a perfect house to have a real option.</h2>
+          <p>
+            This page is built for motivated sellers who need relief, speed, or a cleaner next step.
+            The approach stays calm, local, and straightforward rather than flashy or pushy.
+          </p>
+        </div>
+
+        <div class="pain-grid">
+          <article class="card">
+            <h3>The property needs work</h3>
+            <p>
+              If the house needs major repairs, cleanup, updates, or more work than you want to take on,
+              you can still start with a direct as-is conversation.
+            </p>
+          </article>
+          <article class="card">
+            <h3>The timeline is tight</h3>
+            <p>
+              Inherited property, relocation, vacant houses, financial stress, or a fast change in plans can
+              make simplicity more important than a long retail sales process.
+            </p>
+          </article>
+          <article class="card">
+            <h3>The process feels heavy</h3>
+            <p>
+              You are not signing up for a maze. One conversation, one review, and a clear explanation of
+              what the next step could look like.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-eyebrow">How It Works</div>
+          <h2>A simple 3-step offer path.</h2>
+          <p>
+            The goal is to reduce uncertainty and make the first step feel safe and straightforward.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="card">
+            <div class="step-number">1</div>
+            <h3>Tell us about the property</h3>
+            <p>
+              The short form captures just enough to start the conversation: property address, contact name,
+              phone number, and any optional context the seller wants to share.
+            </p>
+          </article>
+          <article class="card">
+            <div class="step-number">2</div>
+            <h3>We review and reach out</h3>
+            <p>
+              We review the property details, look at the situation, and follow up directly to learn more.
+              Most sellers should expect a response within one business day.
+            </p>
+          </article>
+          <article class="card">
+            <div class="step-number">3</div>
+            <h3>You review your options</h3>
+            <p>
+              You get a direct conversation and can decide whether the offer path makes sense for the property.
+              There is no obligation to move forward after the review call.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell proof-grid">
+        <div class="proof-panel">
+          <div class="section-head" style="margin-bottom: 0;">
+            <div class="section-eyebrow">Local Trust</div>
+            <h2>Local, direct, and built for real Raleigh-area seller situations.</h2>
+            <p>
+              ADN Property Group works with homeowners across Raleigh and the surrounding Wake County area and
+              keeps the process simple for sellers who need a realistic as-is path.
+            </p>
+          </div>
+
+          <ul class="proof-list">
+            <li>
+              <strong>Local credibility copy</strong>
+              ADN Property Group works with homeowners across Raleigh and the surrounding Wake County area and understands the local factors that affect timing, repairs, cleanup needs, and pricing in this market.
+            </li>
+            <li>
+              <strong>Seller reassurance</strong>
+              You can start with a simple property conversation. There is no obligation to accept an offer, and no need to clean, repair, or list the house before reaching out.
+            </li>
+            <li>
+              <strong>Offer and process claim</strong>
+              After you submit the form, ADN reviews the property details and follows up directly to discuss the situation, answer questions, and explain what an as-is offer path could look like for the property.
+            </li>
+          </ul>
+
+          <div class="service-area">
+            <h3>Service Area</h3>
+            <p>
+              We work with sellers across Raleigh, Cary, Garner, and surrounding Wake County areas, including
+              North Raleigh, Southeast Raleigh, Cary, Garner, Knightdale, and Wake Forest.
+            </p>
+            <div class="placeholders">
+              <span class="placeholder-pill">Raleigh</span>
+              <span class="placeholder-pill">NC</span>
+              <span class="placeholder-pill">Wake County</span>
+              <span class="placeholder-pill">Cary</span>
+              <span class="placeholder-pill">Garner</span>
+              <span class="placeholder-pill">Wake Forest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="quote">
+            <p>Start with the address and the basic situation. ADN will review the details before reaching back out directly.</p>
+            <cite>Clear first step</cite>
+          </div>
+          <div class="quote">
+            <p>No repairs, no listing prep, and no obligation to move forward after the initial conversation.</p>
+            <cite>Low-pressure process</cite>
+          </div>
+          <div class="quote">
+            <p>Best fit for sellers dealing with repairs, inherited property, relocation, vacant houses, or a situation that needs a cleaner exit path.</p>
+            <cite>Who this page is for</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-eyebrow">Seller Questions</div>
+          <h2>Answer the hesitations before they become drop-offs.</h2>
+          <p>
+            These FAQs keep the tone calm and credible. They should reduce friction, not sound defensive.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <details open>
+            <summary>Do I need to repair or clean the house first?</summary>
+            <p>
+              No. ADN is open to as-is conversations, including houses that need heavy repairs, cleanup, updates,
+              or a simpler sale path than a traditional listing.
+            </p>
+          </details>
+          <details>
+            <summary>Is there any obligation if I fill out the form?</summary>
+            <p>
+              No. The form is simply a request for a conversation about the property and your situation.
+            </p>
+          </details>
+          <details>
+            <summary>How quickly will someone get back to me?</summary>
+            <p>
+              ADN reviews each request before following up directly. In most cases, you should expect a response
+              within one business day.
+            </p>
+          </details>
+          <details>
+            <summary>What kinds of situations do you work with?</summary>
+            <p>
+              Common fits include inherited houses, tired rentals, vacant properties, downsizing, relocation,
+              major repairs, tenant issues, or sellers who simply want a direct exit.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="shell">
+        <div class="cta-band">
+          <div>
+            <div class="section-eyebrow">Ready When You Are</div>
+            <h2>Start with the address. We will take it from there.</h2>
+            <p>
+              Direct contact, no pressure, and a clean next step for motivated sellers in Raleigh and the surrounding area.
+            </p>
+          </div>
+          <div style="display: grid; gap: 12px;">
+            <a class="button button-primary" href="#seller-form">Get My Cash Offer</a>
+            <a class="button button-secondary" href="tel:+1-919-604-5062">Call (919) 604-5062</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+      <div class="shell footer-inner">
+      <div>
+        <strong>ADN Property Group</strong><br>
+        Serving Raleigh, Cary, Garner, and surrounding Wake County areas<br>
+        North Raleigh, Southeast Raleigh, Cary, Garner, Knightdale, and Wake Forest
+      </div>
+      <div>
+        <strong>Contact</strong><br>
+        (919) 604-5062<br>
+        support@adnpropertygroup.com
+      </div>
+      <div>
+        Public seller lead-capture page for ADN Property Group.<br>
+        Submissions route through a reviewed intake path before MLCS processing.
+      </div>
+    </div>
+  </footer>
+
+  <script src="site-config.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById('offer-form');
+      var success = document.getElementById('form-success');
+      var error = document.getElementById('form-error');
+      var button = form ? form.querySelector('button[type="submit"]') : null;
+      var siteConfig = window.ADN_SELLER_SITE_CONFIG || {};
+      var endpoint = String(siteConfig.formEndpoint || '').trim();
+      if (!form || !success || !error || !button) return;
+
+      if (endpoint) {
+        form.setAttribute('action', endpoint);
+      }
+
+      function showMessage(node) {
+        success.style.display = node === success ? 'block' : 'none';
+        error.style.display = node === error ? 'block' : 'none';
+        node.style.display = 'block';
+        node.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      function resetButton() {
+        button.disabled = false;
+        button.textContent = 'Get My Cash Offer';
+      }
+
+      window.addEventListener('message', function (event) {
+        var data = event && event.data;
+        if (!data || data.type !== 'ADN_SELLER_FORM_RESULT') return;
+        resetButton();
+        if (data.ok) {
+          form.reset();
+          showMessage(success);
+          return;
+        }
+        showMessage(error);
+      });
+
+      form.addEventListener('submit', function (event) {
+        success.style.display = 'none';
+        error.style.display = 'none';
+
+        if (!endpoint) {
+          event.preventDefault();
+          showMessage(error);
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = 'Submitting...';
+      });
+    }());
+  </script>
+</body>
+</html>
