@@ -11,7 +11,7 @@ This repository is intended for:
 
 Current structure:
 
-- `index.html` will be the primary homepage when created
+- `index.html` is now a root homepage placeholder for main-domain Cloudflare Pages readiness
 - `sell-your-house\` now contains the imported ADN seller landing page bundle
 - `about\`, `contact\`, `privacy\`, and `terms\` are reserved for broader site pages
 - `assets\` holds shared CSS, JavaScript, images, and icons

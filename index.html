@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADN Property Group | Local Property Solutions In Raleigh</title>
+  <meta
+    name="description"
+    content="ADN Property Group offers local property solutions for Raleigh-area homeowners, including direct as-is home buying and straightforward seller support."
+  >
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --bg-soft: #15181c;
+      --bg-elevated: #181c21;
+      --panel: rgba(21, 24, 29, 0.94);
+      --panel-soft: rgba(255, 255, 255, 0.03);
+      --ink: #f4efe6;
+      --muted: #b6ad9f;
+      --gold: #d4a63a;
+      --gold-soft: #ead29b;
+      --line: rgba(212, 166, 58, 0.16);
+      --line-strong: rgba(212, 166, 58, 0.3);
+      --shadow: rgba(0, 0, 0, 0.22);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Segoe UI Variable Text", "Segoe UI", Aptos, "Trebuchet MS", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(212, 166, 58, 0.14), transparent 24%),
+        radial-gradient(circle at 84% 12%, rgba(212, 166, 58, 0.08), transparent 18%),
+        linear-gradient(180deg, #090b0d 0%, #111418 28%, #0d0f12 100%);
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(10, 12, 15, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212, 166, 58, 0.1);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      flex: 0 0 auto;
+    }
+
+    .brand-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-tag {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .mini-nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .mini-nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: #1a1308;
+      background: linear-gradient(135deg, #d4a63a 0%, #efcf83 100%);
+      box-shadow: 0 18px 34px rgba(212, 166, 58, 0.2);
+    }
+
+    .button-secondary {
+      color: var(--ink);
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .hero {
+      padding: 72px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .eyebrow,
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 166, 58, 0.22);
+      background: rgba(212, 166, 58, 0.08);
+      color: var(--gold-soft);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      max-width: 11ch;
+    }
+
+    .hero-copy p {
+      margin: 0 0 14px;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .hero-points {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .hero-points li {
+      padding-left: 18px;
+      position: relative;
+      color: #ddd5c9;
+    }
+
+    .hero-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 5px rgba(212, 166, 58, 0.12);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      color: #d6cebe;
+      font-size: 0.95rem;
+    }
+
+    .card,
+    .feature-card,
+    .cta-band,
+    .stat-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 52px var(--shadow);
+    }
+
+    .card,
+    .feature-card,
+    .stat-card {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
+        var(--panel);
+      padding: 26px;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+    .stat-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .stat-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.7rem;
+      line-height: 1.08;
+    }
+
+    .stat-card p,
+    .card p,
+    .feature-card p,
+    .section-head p,
+    .cta-band p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .quick-links {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .quick-link {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: var(--panel-soft);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e8e1d4;
+    }
+
+    .quick-link span:last-child {
+      color: var(--gold-soft);
+    }
+
+    .section {
+      padding: 22px 0 64px;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin: 14px 0 10px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .feature-grid,
+    .services-grid,
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-title,
+    .feature-card h3,
+    .market-grid h3 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+    }
+
+    .service-kicker {
+      margin: 0 0 8px;
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+      display: grid;
+      gap: 10px;
+      color: #ddd5c9;
+    }
+
+    .service-list li {
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .service-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(234, 210, 155, 0.92);
+    }
+
+    .cta {
+      padding: 8px 0 76px;
+    }
+
+    .cta-band {
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(212, 166, 58, 0.14), rgba(255, 255, 255, 0.02)),
+        rgba(18, 22, 26, 0.96);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .cta-band h2 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+      line-height: 1.05;
+    }
+
+    footer {
+      padding: 0 0 28px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding-top: 18px;
+      border-top: 1px solid rgba(212, 166, 58, 0.12);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .feature-grid,
+      .services-grid,
+      .market-grid,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-actions,
+      .mini-nav,
+      .hero-actions {
+        width: 100%;
+      }
+
+      .topbar-actions .button,
+      .hero-actions .button,
+      .cta-band .button {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      h1 {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="/">
+        <img
+          class="brand-mark"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='16' fill='%23171b20' stroke='%23d4a63a' stroke-width='2'/%3E%3Cpath d='M16 44V20h7.5c4.6 0 7.5 2.9 7.5 7.3v9.4c0 4.4-2.9 7.3-7.5 7.3H16Zm5.3-4.5h2.1c1.5 0 2.5-1 2.5-2.7v-9.7c0-1.7-1-2.7-2.5-2.7h-2.1v15.1Z' fill='%23f4efe6'/%3E%3Cpath d='M34 44l7.4-24h6.8L55.6 44h-5.5l-1.2-4.4h-8.1L39.6 44H34Zm8-8.8h5.7L45 25.3 42 35.2Z' fill='%23f4efe6'/%3E%3C/svg%3E"
+          alt="ADN Property Group"
+        >
+        <div>
+          <div class="brand-name">ADN Property Group</div>
+          <div class="brand-tag">Local property solutions for Raleigh-area homeowners</div>
+        </div>
+      </a>
+
+      <div class="topbar-actions">
+        <nav class="mini-nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#market">Market</a>
+        </nav>
+        <a class="button button-secondary" href="tel:+1-919-604-5062">Call (919) 604-5062</a>
+        <a class="button button-primary" href="/sell-your-house/">Seller Offer Page</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Raleigh Property Solutions</div>
+          <h1>Direct help for homeowners who need a simpler path forward.</h1>
+          <p>
+            ADN Property Group works with Raleigh-area property owners who want clarity, speed, and a more direct conversation
+            than the usual maze of listings, repairs, delays, and handoffs.
+          </p>
+          <p>
+            Our public site starts with the seller lane because that is the most immediate need today, but the broader company
+            presence is designed to support straightforward local property solutions over time.
+          </p>
+
+          <ul class="hero-points">
+            <li>Direct as-is seller conversations for owners who want a clean next step</li>
+            <li>Local, Raleigh-area context instead of generic national funnel copy</li>
+            <li>Clear communication around timing, condition, and realistic next actions</li>
+            <li>A public-facing company site that stays calm, direct, and grounded</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="/sell-your-house/">Get My Cash Offer</a>
+            <a class="button button-secondary" href="mailto:support@adnpropertygroup.com">Email ADN</a>
+          </div>
+
+          <div class="hero-note">
+            Current primary public conversion path: the seller offer page for homeowners dealing with repairs, inherited property,
+            timeline pressure, unwanted rentals, or a house that simply needs a more direct exit path.
+          </div>
+        </div>
+
+        <aside class="hero-side">
+          <div class="stat-card">
+            <strong>Current Best Fit</strong>
+            <h2>Homeowners who want to sell as-is without turning the process into a full renovation project.</h2>
+            <p>
+              If the property needs work, the timeline is tight, or you just want a realistic local conversation, the seller page is
+              the right first stop.
+            </p>
+
+            <div class="quick-links">
+              <a class="quick-link" href="/sell-your-house/">
+                <span>Open seller landing page</span>
+                <span>Go</span>
+              </a>
+              <a class="quick-link" href="tel:+1-919-604-5062">
+                <span>Call ADN directly</span>
+                <span>(919) 604-5062</span>
+              </a>
+              <a class="quick-link" href="mailto:support@adnpropertygroup.com">
+                <span>Email support</span>
+                <span>support@adnpropertygroup.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <strong>Service Area</strong>
+            <h2>Raleigh, Cary, Garner, and surrounding Wake County markets.</h2>
+            <p>
+              The public messaging stays intentionally local. The goal is not to look national. The goal is to feel relevant,
+              grounded, and direct for real seller situations in this market.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-eyebrow">Services</div>
+          <h2>Start with the lane that is already live and useful.</h2>
+          <p>
+            The main public site now exists, but the most developed public service surface is still the seller offer path. The company
+            homepage should support that conversion lane, not distract from it.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <p class="service-kicker">Seller Offer Page</p>
+            <h3 class="service-title">As-is seller conversations</h3>
+            <p>
+              Built for homeowners who need a direct, local next step without a long repair list, drawn-out prep cycle, or generic lead funnel.
+            </p>
+            <ul class="service-list">
+              <li>Repairs and cleanup do not have to be done first</li>
+              <li>Flexible timing based on your situation</li>
+              <li>One clear request form and direct follow-up</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="service-kicker">Company Presence</p>
+            <h3 class="service-title">A cleaner public front door</h3>
+            <p>
+              This homepage gives ADN Property Group a real root-domain presence so the broader brand can exist without forcing every visitor
+              directly into a single-page landing experience.
+            </p>
+            <ul class="service-list">
+              <li>Main domain now has a real homepage</li>
+              <li>Seller lane remains distinct and focused</li>
+              <li>Future pages can expand from this structure cleanly</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="service-kicker">Local Contact</p>
+            <h3 class="service-title">Direct first-step communication</h3>
+            <p>
+              Whether the next step is a seller request or a direct conversation, the public site now presents a simple path into the business.
+            </p>
+            <ul class="service-list">
+              <li>Phone: (919) 604-5062</li>
+              <li>Email: support@adnpropertygroup.com</li>
+              <li>Seller path: `/sell-your-house/`</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-eyebrow">About ADN</div>
+          <h2>Local, direct, and built for real property situations.</h2>
+          <p>
+            ADN Property Group is positioning itself around clarity, local relevance, and straightforward next steps rather than vague claims
+            or inflated institutional language. The tone should feel steady, practical, and close to the actual homeowner conversation.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Local market context matters</h3>
+            <p>
+              Timing, repairs, cleanup needs, inherited property, tenant issues, and neighborhood-specific realities all affect the right next step.
+              The public site should sound like it understands that.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Direct conversations beat layered handoffs</h3>
+            <p>
+              The public experience is being shaped around a cleaner path from first visit to actual human follow-up, especially for motivated sellers.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Brand first, hype last</h3>
+            <p>
+              The site should feel serious and stable. That means calm visuals, concise claims, and enough structure to support long-term public trust.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="market">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-eyebrow">Market Focus</div>
+          <h2>Built around Raleigh and the surrounding Wake County area.</h2>
+          <p>
+            The current seller messaging is tuned to local owners in Raleigh, Cary, Garner, Knightdale, Wake Forest, and nearby areas. That local
+            footprint should remain visible across the main site as additional pages are added.
+          </p>
+        </div>
+
+        <div class="market-grid">
+          <article class="card">
+            <h3>Raleigh homeowners</h3>
+            <p>
+              Core market focus for the current seller page, including sellers dealing with repairs, outdated property, relocation, or inherited homes.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Wake County sellers</h3>
+            <p>
+              Broader service area messaging supports Cary, Garner, Knightdale, Wake Forest, and surrounding communities without pretending to be a national brand.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Motivated property situations</h3>
+            <p>
+              The strongest current public fit is still motivated seller traffic. That is why the seller page remains the active conversion destination.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="shell">
+        <div class="cta-band">
+          <div>
+            <h2>Need the seller-facing path right now?</h2>
+            <p>
+              Start with the existing as-is offer page. That is still the strongest live public conversion surface in the ADN website structure today.
+            </p>
+          </div>
+          <a class="button button-primary" href="/sell-your-house/">Visit Seller Offer Page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div>
+        <strong>ADN Property Group</strong><br>
+        Serving Raleigh, Cary, Garner, and surrounding Wake County areas
+      </div>
+      <div>
+        (919) 604-5062<br>
+        support@adnpropertygroup.com
+      </div>
+      <div>
+        Public company homepage for `adnpropertygroup.com`<br>
+        Seller page lives at `/sell-your-house/`
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
