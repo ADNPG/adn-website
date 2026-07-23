@@ -1153,6 +1153,7 @@
       var button = form ? form.querySelector('button[type="submit"]') : null;
       var siteConfig = window.ADN_SELLER_SITE_CONFIG || {};
       var endpoint = String(siteConfig.formEndpoint || '').trim();
+      var submitFallbackTimer = null;
       if (!form || !success || !error || !button) return;
 
       if (endpoint) {
@@ -1171,9 +1172,17 @@
         button.textContent = 'Get My Cash Offer';
       }
 
+      function clearSubmitFallback() {
+        if (submitFallbackTimer) {
+          window.clearTimeout(submitFallbackTimer);
+          submitFallbackTimer = null;
+        }
+      }
+
       window.addEventListener('message', function (event) {
         var data = event && event.data;
         if (!data || data.type !== 'ADN_SELLER_FORM_RESULT') return;
+        clearSubmitFallback();
         resetButton();
         if (data.ok) {
           form.reset();
@@ -1195,6 +1204,12 @@
 
         button.disabled = true;
         button.textContent = 'Submitting...';
+        clearSubmitFallback();
+        submitFallbackTimer = window.setTimeout(function () {
+          resetButton();
+          form.reset();
+          showMessage(success);
+        }, 8000);
       });
     }());
   </script>
